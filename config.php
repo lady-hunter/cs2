@@ -35,16 +35,16 @@ if ($isLocalhost) {
     // ============================================
     // LƯU Ý: Thay đổi thông tin phù hợp với hosting của bạn
     define('DB_HOST', 'localhost');
-    define('DB_NAME', 'your_hosting_dbname');      // VD: slrnkpif_random_chat
-    define('DB_USER', 'your_hosting_username');    // VD: slrnkpif_admin
-    define('DB_PASS', 'your_hosting_password');    // Password từ cPanel
+    define('DB_NAME', 'stlmkmqhhosting_nguyenanhkiet');
+    define('DB_USER', 'stlmkmqhhosting_nguyenanhkiet');
+    define('DB_PASS', '.[WL7NXB~Ml-sGg');
     
-    define('BASE_URL', 'https://yourdomain.com');  // VD: https://lequocdinh.id.vn
+    define('BASE_URL', 'https://onehost-amdcloudhn042501.000nethost.com');
     define('BASE_PATH', '/');
     
-    // Tắt hiển thị lỗi trên production
-    ini_set('display_errors', 0);
-    error_reporting(0);
+    // Bật hiển thị lỗi tạm thời để debug
+    ini_set('display_errors', 1);
+    error_reporting(E_ALL);
     
     // Log lỗi vào file
     ini_set('log_errors', 1);
