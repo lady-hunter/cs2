@@ -1,0 +1,98 @@
+/* -- CSS LOGIN -- */
+.login-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 396px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-header h1 {
+    color: #eb122f;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.login-header p {
+    color: #606770;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.password-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-field input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 0;
+    color: #1877f2;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.toggle-password:hover {
+    opacity: 0.8;
+}
+
+.forgot-password {
+    text-align: center;
+    color: #1877f2;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    border-bottom: 1px solid #dadde1;
+    margin: 20px 0;
+}
+
+.create-account {
+    background-color: #42b72a;
+    color: white;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 14px 16px;
+}
+
+.create-account:hover {
+    background-color: #36a420;
+}
+
+/* -- RESPONSIVE -- */
+@media (max-width: 480px) {
+    .login-container {
+        width: 100%;
+        max-width: 450px;
+    }
+}

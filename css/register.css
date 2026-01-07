@@ -1,0 +1,128 @@
+/* -- CSS REGISTER -- */
+.register-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #dadde1;
+    padding-bottom: 20px;
+}
+
+.register-header h1 {
+    color: #eb122f;
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.register-header p {
+    color: #606770;
+    font-size: 15px;
+}
+
+.register-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.form-row input {
+    flex: 1;
+    min-width: 0;
+}
+
+.form-group {
+    margin-top: 10px;
+}
+
+.form-group label {
+    display: block;
+    color: #606770;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.birthday-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+.birthday-inputs select {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #dddfe2;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.gender-inputs {
+    display: flex;
+    gap: 15px;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    color: #606770;
+}
+
+.radio-label input[type="radio"] {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
+.terms {
+    font-size: 11px;
+    color: #777;
+    line-height: 1.4;
+    margin: 15px 0;
+}
+
+.login-link {
+    text-align: center;
+    color: #1877f2;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 15px;
+    display: block;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+/* -- RESPONSIVE -- */
+@media (max-width: 480px) {
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .form-row input {
+        width: 100%;
+    }
+    
+    .birthday-inputs {
+        flex-direction: column;
+    }
+    
+    .register-container {
+        padding: 15px;
+    }
+}

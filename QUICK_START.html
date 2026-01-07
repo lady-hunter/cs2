@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Start - Messaging System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .step {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .step:last-child {
+            border-bottom: none;
+        }
+        
+        .step-number {
+            display: inline-block;
+            background: #31a24c;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .step h2 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+        
+        .step p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            margin-left: 45px;
+        }
+        
+        .code {
+            background: #f5f5f5;
+            border-left: 3px solid #31a24c;
+            padding: 12px 16px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            margin-left: 45px;
+            margin-bottom: 12px;
+            overflow-x: auto;
+            font-size: 13px;
+        }
+        
+        .btn-group {
+            margin-left: 45px;
+            display: flex;
+            gap: 12px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .btn-primary {
+            background: #31a24c;
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #2a8a40;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(49, 162, 76, 0.3);
+        }
+        
+        .btn-secondary {
+            background: #f0f0f0;
+            color: #333;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .btn-secondary:hover {
+            background: #e4e4e4;
+        }
+        
+        .feature-list {
+            margin-left: 45px;
+            list-style: none;
+        }
+        
+        .feature-list li {
+            padding: 8px 0;
+            color: #666;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .feature-list li:before {
+            content: "✓ ";
+            color: #31a24c;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .info-box {
+            background: #e8f5e9;
+            border-left: 4px solid #31a24c;
+            padding: 16px;
+            border-radius: 4px;
+            margin-left: 45px;
+            margin-bottom: 12px;
+            color: #2e7d32;
+        }
+        
+        .warning-box {
+            background: #fff3e0;
+            border-left: 4px solid #f57c00;
+            padding: 16px;
+            border-radius: 4px;
+            margin-left: 45px;
+            margin-bottom: 12px;
+            color: #e65100;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            margin-left: 45px;
+            margin-bottom: 12px;
+        }
+        
+        .feature-card {
+            background: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            padding: 16px;
+            border-radius: 6px;
+            text-align: center;
+        }
+        
+        .feature-card .icon {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+        
+        .feature-card h4 {
+            color: #333;
+            margin-bottom: 4px;
+        }
+        
+        .feature-card p {
+            color: #666;
+            font-size: 13px;
+            margin: 0;
+        }
+        
+        .troubleshoot {
+            background: #f5f5f5;
+            padding: 16px;
+            border-radius: 6px;
+            margin-left: 45px;
+        }
+        
+        .troubleshoot h4 {
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .troubleshoot p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        .footer {
+            text-align: center;
+            color: #999;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Quick Start Guide</h1>
+        <p class="subtitle">Hệ Thống Nhắn Tin - Messaging System (Facebook Messenger Style)</p>
+        
+        <div class="step">
+            <h2><span class="step-number">1</span>Chạy Database Setup</h2>
+            <p>Mở trình duyệt và truy cập đường dẫn sau để tạo các bảng cần thiết:</p>
+            <div class="code">http://localhost/CS2/setup.php</div>
+            <div class="info-box">
+                ✓ Điều này sẽ tự động tạo 2 bảng: <strong>messages</strong> và <strong>conversations</strong>
+            </div>
+            <p>Nếu setup thành công, bạn sẽ thấy thông báo xanh. Nếu có lỗi, kiểm tra:</p>
+            <ul class="feature-list">
+                <li>Database đã được tạo trong phpMyAdmin</li>
+                <li>Kết nối MySQL đang hoạt động</li>
+                <li>File config/db.php đúng</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <h2><span class="step-number">2</span>Đăng Nhập Hoặc Tạo Tài Khoản</h2>
+            <p>Truy cập trang login/register:</p>
+            <div class="code">http://localhost/CS2/view/login.php</div>
+            <p>Tạo ít nhất 2 tài khoản để có thể thử tính năng nhắn tin.</p>
+        </div>
+        
+        <div class="step">
+            <h2><span class="step-number">3</span>Mở Trang Messages</h2>
+            <p>Có 2 cách để truy cập trang Messages:</p>
+            <ul class="feature-list">
+                <li>Nhấn nút <strong>"Messages"</strong> ở header hoặc sidebar trên trang Home</li>
+                <li>Hoặc truy cập trực tiếp: <strong>http://localhost/CS2/view/messages.php</strong></li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <h2><span class="step-number">4</span>Bắt Đầu Nhắn Tin</h2>
+            <p>Giao diện được chia thành 2 phần chính:</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon">📌</div>
+                    <h4>Sidebar Trái</h4>
+                    <p>Danh sách conversations của bạn</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">💬</div>
+                    <h4>Chat Area</h4>
+                    <p>Tin nhắn và form input</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔍</div>
+                    <h4>Search</h4>
+                    <p>Tìm conversation nhanh</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">✏️</div>
+                    <h4>New Message</h4>
+                    <p>Tạo cuộc trò chuyện mới</p>
+                </div>
+            </div>
+            
+            <h4 style="margin-left: 45px; margin-top: 16px;">Các Tính Năng:</h4>
+            <ul class="feature-list">
+                <li><strong>Nhắn tin văn bản</strong>: Gõ tin nhắn vào ô input và nhấn ❤️ hoặc Enter</li>
+                <li><strong>Gửi ảnh</strong>: Nhấn nút <strong>+</strong> để chọn ảnh từ máy</li>
+                <li><strong>Search conversations</strong>: Sử dụng ô tìm kiếm ở sidebar trái</li>
+                <li><strong>New message</strong>: Nhấn nút <strong>✏️</strong> để mở modal tìm người dùng</li>
+                <li><strong>Badge chưa đọc</strong>: Hiển thị số lượng tin nhắn chưa đọc</li>
+                <li><strong>Real-time updates</strong>: Tin nhắn cập nhật mỗi 2 giây tự động</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <h2><span class="step-number">5</span>Tùy Chỉnh (Optional)</h2>
+            <p>Nếu muốn thay đổi một số cài đặt:</p>
+            
+            <h4 style="margin-left: 45px; margin-bottom: 12px;">📝 Thay Đổi Tần Suất Cập Nhật</h4>
+            <p>Mở file <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px;">view/messages.php</code> và tìm dòng:</p>
+            <div class="code">setInterval(loadMessages, 2000); // Thay 2000 thành giá trị khác (ms)</div>
+            
+            <h4 style="margin-left: 45px; margin-top: 16px; margin-bottom: 12px;">🎨 Thay Đổi Màu Sắc</h4>
+            <p>Mở file <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px;">css/messages.css</code> và tìm:</p>
+            <div class="code">.message-group.sent .message-text {
+    background: #31a24c; /* Thay đổi màu xanh */
+}</div>
+        </div>
+        
+        <div class="step">
+            <h2><span class="step-number">6</span>Troubleshooting</h2>
+            
+            <div class="troubleshoot">
+                <h4>❌ Tin nhắn không gửi được</h4>
+                <p>✓ Kiểm tra kết nối database</p>
+                <p>✓ Kiểm tra folder <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px;">assets/messages/</code> có tồn tại không</p>
+                <p>✓ Kiểm tra browser console (F12) có lỗi gì</p>
+            </div>
+            
+            <div class="troubleshoot">
+                <h4>❌ Ảnh không upload được</h4>
+                <p>✓ Kiểm tra folder <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px;">assets/messages/</code> quyền ghi</p>
+                <p>✓ Chạy lệnh: <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px;">chmod 755 assets/messages/</code></p>
+                <p>✓ Kiểm tra kích thước ảnh không vượt 5MB</p>
+            </div>
+            
+            <div class="troubleshoot">
+                <h4>❌ Real-time không hoạt động</h4>
+                <p>✓ Kiểm tra browser console (F12) có lỗi JavaScript không</p>
+                <p>✓ Kiểm tra Network tab xem request tới API có thành công không</p>
+                <p>✓ Tăng tần suất polling từ 2000ms xuống 1000ms</p>
+            </div>
+        </div>
+        
+        <div class="step">
+            <h2><span class="step-number">7</span>Tài Liệu Đầy Đủ</h2>
+            <p>Để xem tài liệu chi tiết hơn, mở file:</p>
+            <div class="code">MESSAGING_README.md</div>
+            <p>Tài liệu này chứa:</p>
+            <ul class="feature-list">
+                <li>Cấu trúc database chi tiết</li>
+                <li>API endpoints documentation</li>
+                <li>Hướng dẫn phát triển tiếp theo</li>
+                <li>Lộ trình bổ sung tính năng</li>
+            </ul>
+        </div>
+        
+        <div class="step">
+            <h2><span class="step-number">✨</span>Hoàn Tất!</h2>
+            <p>Bây giờ bạn đã sẵn sàng sử dụng hệ thống nhắn tin. Hãy thử:</p>
+            <div class="btn-group">
+                <a href="setup.php" class="btn btn-primary">Run Setup</a>
+                <a href="view/home.php" class="btn btn-secondary">Go to Home</a>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Messaging System v1.0.0 | Created with ❤️ | © 2025</p>
+        </div>
+    </div>
+</body>
+</html>
