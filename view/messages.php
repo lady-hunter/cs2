@@ -299,7 +299,21 @@ if ($conversation_user_id) {
                         <input type="hidden" id="receiverId" value="<?php echo $conversation_user_id; ?>">
                         
                         <div class="input-wrapper">
-                            <button type="button" class="btn-icon" id="emojiBtn"><i class="fas fa-face-smile"></i></button>
+                            <div class="emoji-container">
+                                <button type="button" class="btn-icon" id="emojiBtn"><i class="fas fa-face-smile"></i></button>
+                                <div class="emoji-picker" id="emojiPicker">
+                                    <div class="emoji-header">
+                                        <span class="emoji-tab active" data-category="smileys">😀</span>
+                                        <span class="emoji-tab" data-category="gestures">👋</span>
+                                        <span class="emoji-tab" data-category="hearts">❤️</span>
+                                        <span class="emoji-tab" data-category="animals">🐱</span>
+                                        <span class="emoji-tab" data-category="food">🍕</span>
+                                        <span class="emoji-tab" data-category="activities">⚽</span>
+                                        <span class="emoji-tab" data-category="objects">💡</span>
+                                    </div>
+                                    <div class="emoji-content" id="emojiContent"></div>
+                                </div>
+                            </div>
                             <button type="button" class="btn-icon" id="attachBtn"><i class="fas fa-plus"></i></button>
                             
                             <input type="text" id="messageInput" placeholder="Aa" autocomplete="off">
@@ -605,5 +619,6 @@ if ($conversation_user_id) {
 </div>
 
 <script src="../assets/video-call.js"></script>
+<script src="../assets/emoji-picker.js"></script>
 </body>
 </html>

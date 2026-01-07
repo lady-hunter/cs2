@@ -242,7 +242,7 @@ if ($result) {
                 <a href="#" class="menu-item active" onclick="showSection('feed'); return false;">Feed</a>
                 <a href="messages.php" class="menu-item">Messenger</a>
                 <a href="friends.php" class="menu-item">Friends</a>
-                <a href="#" class="menu-item" onclick="goToRandom(); return false;">🎲 Random</a>
+                <a href="random.php" class="menu-item">🎲 Random</a>
                 <a href="#" class="menu-item">Photos</a>
                 <a href="settings.php" class="menu-item">Settings</a>
             </div>

@@ -1,22 +1,41 @@
 <?php
+/**
+ * Database Connection
+ * Kết nối MySQL - Hỗ trợ cả mysqli và PDO
+ */
 
+// Load config
+require_once __DIR__ . '/../config.php';
 
-$servername = "localhost";
-$username = "root";
-$password = ""; 
-$dbname = "random_chat";
+// ============================================
+// KẾT NỐI MYSQLI (giữ tương thích code cũ)
+// ============================================
+$connection = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-
-$connection = new mysqli($servername, $username, $password);
-
-// check n test
 if ($connection->connect_error) {
     die("Connection failed: " . $connection->connect_error);
 }
 
+$connection->set_charset("utf8mb4");
 
-$connection->select_db($dbname);
-$connection->set_charset("utf8");
+// Alias cho các file cũ sử dụng $conn
+$conn = $connection;
+
+// ============================================
+// KẾT NỐI PDO (cho code mới)
+// ============================================
+try {
+    $dsn = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME . ";charset=utf8mb4";
+    $db = new PDO($dsn, DB_USER, DB_PASS);
+    
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    $db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+    
+} catch (PDOException $e) {
+    error_log("PDO Error: " . $e->getMessage());
+    // PDO là optional, không die nếu lỗi
+}
 
 /*
 ===== DATABASE STRUCTURE =====
