@@ -39,7 +39,7 @@ if ($isLocalhost) {
     define('DB_USER', 'stlmkmqhhosting_nguyenanhkiet');
     define('DB_PASS', '.[WL7NXB~Ml-sGg');
     
-    define('BASE_URL', 'https://onehost-amdcloudhn042501.000nethost.com');
+    define('BASE_URL', 'https://nguyenanhkiet.id.vn');
     define('BASE_PATH', '/');
     
     // Bật hiển thị lỗi tạm thời để debug
